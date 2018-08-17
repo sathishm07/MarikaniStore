@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/img_grocery_store_1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="8dp"
+            android:outlineProvider="bounds"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/grocery_store_inside" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/img_grocery_store_1"
+            android:layout_marginTop="-8dp"
+            android:fontFamily="sans-serif"
+            android:text="Marikani Foods"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/store_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_name"
+            android:layout_marginLeft="3dp"
+            android:text="Provision and Food Products - Retail and Wholesale" />
+
+        <TextView
+            android:id="@+id/store_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_details"
+            android:layout_marginLeft="3dp"
+            android:text="#7, Market Lane, Royapuram, Chennai - 600013." />
+
+        <TextView
+            android:id="@+id/operating_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_address"
+            android:layout_marginLeft="3dp"
+            android:text="Operating Hours: 10 AM - 10 PM" />
+
+        <TextView
+            android:id="@+id/break_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/operating_hours"
+            android:layout_marginLeft="3dp"
+            android:text="Lunch Hour: 2 PM - 3 PM" />
+
+        <TextView
+            android:id="@+id/store_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/break_time"
+            android:layout_marginLeft="3dp"
+            android:text="Mobile: +91 9789823287" />
+
+        <TextView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_mobile"
+            android:layout_marginLeft="3dp"
+            android:text="Locate us below:" />
+
+        <fragment
+            android:id="@+id/map_view"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/navigation"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
